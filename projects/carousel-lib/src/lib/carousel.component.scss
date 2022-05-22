@@ -1,0 +1,51 @@
+@import url('https://onlinecms.mtn.co.za/sites/default/files/vivid-fonts.css');
+
+:host {
+  .focused-card-container {
+    position: relative;
+
+    h2 {
+      font-family: 'MTNBrighterSans-ExtraLight', Arial, sans-serif;
+      position: absolute;
+      left: calc(-16.66666667% * 2.76);
+
+      b {
+        font-family: 'MTNBrighterSans-Bold', Arial, sans-serif;
+        display: block;
+      }
+
+      @media (max-width: 996px) {
+        font-size: 1.2rem;
+      }
+    }
+    button {
+      position: absolute;
+      display: inline-block;
+      border-radius: 100%;
+      color: #fff;
+      text-decoration: none;
+      background: #232323;
+      padding: 8px 10px;
+      cursor: pointer;
+      bottom: 8%;
+      transition: box-shadow 0.2s;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover {
+        box-shadow: 0 16px 56px 0 rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      &.back-button {
+        left: calc(-16.66666667% + (-16.66666667% / 2));
+      }
+
+      &.next-button {
+        right: calc(-16.66666667% + (-16.66666667% / 2))
+      }
+    }
+  }
+}

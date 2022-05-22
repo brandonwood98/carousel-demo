@@ -1,0 +1,48 @@
+<div class="container-lg my-5">
+  <div class="row align-items-center">
+    <div class="col-md-2" *ngIf="isTablet"></div>
+
+    <ng-container *ngFor="let slide of startSlides">
+      <ng-container *ngTemplateOutlet="slideCard; context: {$implicit: slide}"></ng-container>
+    </ng-container>
+
+    <div class="focused-card-container col-md-4">
+      <h2>What are you <b>here to do?</b></h2>
+      <mtn-carousel-card @growIn [focused]="true" [variant]="variant">
+        <svg card-icon xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+        </svg>
+        <h1 card-title>{{ focusedSlide.title }}</h1>
+        <h5 card-footer>{{ focusedSlide.cta }}</h5>
+      </mtn-carousel-card>
+
+      <button class="back-button" (click)="back()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button class="next-button" (click)="next()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <ng-container *ngFor="let slide of endSlides">
+      <ng-container *ngTemplateOutlet="slideCard; context: {$implicit: slide}"></ng-container>
+    </ng-container>
+
+    <div class="col-md-2" *ngIf="isTablet"></div>
+  </div>
+
+  <ng-template let-slide #slideCard>
+    <mtn-carousel-card class="col-md-2" [focused]="false" [variant]="variant">
+      <svg card-icon xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+      </svg>
+      <h1 card-title>{{ slide.title }}</h1>
+      <h5 card-footer>{{ slide.cta }}</h5>
+    </mtn-carousel-card>
+  </ng-template>
