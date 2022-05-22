@@ -1,16 +1,18 @@
-@import url('https://onlinecms.mtn.co.za/sites/default/files/vivid-fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;800&display=swap');
 
 :host {
   .focused-card-container {
     position: relative;
 
     h2 {
-      font-family: 'MTNBrighterSans-ExtraLight', Arial, sans-serif;
+      font-family: 'Work Sans', Arial, sans-serif;
       position: absolute;
       left: calc(-16.66666667% * 2.76);
+      font-weight: 300;
 
       b {
-        font-family: 'MTNBrighterSans-Bold', Arial, sans-serif;
+        font-family: 'Work Sans', Arial, sans-serif;
+        font-weight: 500;
         display: block;
       }
 

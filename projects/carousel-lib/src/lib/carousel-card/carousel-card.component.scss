@@ -1,4 +1,4 @@
-@import url('https://onlinecms.mtn.co.za/sites/default/files/vivid-fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap');
 
 :host {
   display: block;
@@ -36,7 +36,8 @@
       h1 {
         display: flex;
         align-items: center;
-        font-family: 'MTNBrighterSans-Regular', Arial, sans-serif;
+        font-family: 'Work Sans', Arial, sans-serif;
+        font-weight: 600;
         font-size: 1.2rem;
         text-align: center;
         min-height: 75px;
@@ -69,7 +70,7 @@
       cursor: pointer;
 
       ::ng-deep h5 {
-        font-family: 'MTNBrighterSans-Regular', Arial, sans-serif;
+        font-family: 'Work Sans', Arial, sans-serif;
         text-transform: uppercase;
       }
 
