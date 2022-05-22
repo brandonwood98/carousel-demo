@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {CarouselModule} from "../../../carousel-lib/src/lib/carousel.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import {CarouselModule} from "../../../carousel-lib/src/lib/carousel.module";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     CarouselModule
   ],
   providers: [],
